@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,53 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Donate - Xi Sigma</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar, footer {
+      background-color: #6A0DAD;
+      color: white;
+    }
+    .nav-link {
+      color: white;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #FFD700;
+    }
+    .donate-section {
+      background: white;
+      padding: 3rem 1rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      margin-bottom: 3rem;
+    }
+    .cashapp-img {
+      max-width: 200px;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #FFD700;
+    }
+  </style>
 </head>
 <body>
-  <header class="header-one" style="background-color:#6A0DAD; padding: 1rem;">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 style="color: white;">Xi Sigma</h1>
-      <nav>
-        <a href="index.html" style="color: white; margin-right: 1rem;">Home</a>
-        <a href="neos.html" style="color: white; margin-right: 1rem;">Dent NEOS</a>
-        <a href="calendar.html" style="color: white; margin-right: 1rem;">Event Calendar</a>
-        <a href="history.html" style="color: white; margin-right: 1rem;">History</a>
-        <a href="lineage.html" style="color: white; margin-right: 1rem;">Lineage</a>
-        <a href="photos.html" style="color: white; margin-right: 1rem;">Photos</a>
-        <a href="contact-us.html" style="color: white;">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container py-5">
-    <h2 class="text-center mb-4">Support Xi Sigma</h2>
-    <p class="lead text-center mb-5">
-      Your donation helps us fund scholarships, events, and community outreach initiatives. Thank you for supporting our brotherhood!
-    </p>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your name">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
-          </div>
-          <div class="mb-3">
-            <label for="amount" class="form-label">Donation Amount ($)</label>
-            <input type="number" class="form-control" id="amount" placeholder="50">
-          </div>
-          <div class="mb-3">
-            <label for="note" class="form-label">Message (Optional)</label>
-            <textarea class="form-control" id="note" rows="4" placeholder="Leave a note..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100" style="background-color:#6A0DAD; border-color:#6A0DAD;">Donate Now</button>
-        </form>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Xi Sigma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="neos.html">Dent NEOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Event Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="lineage.html">Lineage</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="donation.html">Donate</a></li>
+        </ul>
       </div>
+    </div>
+  </nav>
+
+  <!-- Donation Main Content -->
+  <main class="container py-5">
+    <h2 class="text-center mb-4" data-aos="fade-down">Support Xi Sigma</h2>
+    <p class="lead text-center mb-5" data-aos="fade-up">
+      Your donation helps fund scholarships, events, and service efforts that impact lives. Thank you for your support!
+    </p>
+
+    <!-- CashApp Quick Donate -->
+    <div class="donate-section text-center mx-auto mb-5" data-aos="zoom-in">
+      <h4>Donate Instantly via CashApp</h4>
+      <p class="fs-5">Send directly to <strong>$xulabruhz</strong></p>
+      <img src="assets/images/cashapp-qr-placeholder.png" alt="CashApp QR Code" class="cashapp-img">
+      <div>
+        <a href="https://cash.app/$xulabruhz" target="_blank" class="btn btn-success btn-lg mt-2">
+          <i class="fa-brands fa-cash-register me-2"></i> Open in CashApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Manual Donation Form -->
+    <div class="donate-section" data-aos="fade-up" data-aos-delay="100">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Your name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+        </div>
+        <div class="mb-3">
+          <label for="amount" class="form-label">Donation Amount ($)</label>
+          <input type="number" class="form-control" id="amount" placeholder="50" required />
+        </div>
+        <div class="mb-3">
+          <label for="note" class="form-label">Message (Optional)</label>
+          <textarea class="form-control" id="note" rows="4" placeholder="Leave a note..."></textarea>
+        </div>
+        <button type="submit" class="btn w-100 text-white" style="background-color:#6A0DAD;">
+          <i class="fa-solid fa-donate me-2"></i>Donate Now
+        </button>
+      </form>
     </div>
   </main>
 
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-icons mb-2">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      &copy; 2025 Xi Sigma Chapter. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
