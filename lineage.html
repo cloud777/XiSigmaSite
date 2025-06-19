@@ -1,39 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lineage - Xi Sigma</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header, footer {
+      background-color: #6A0DAD;
+      color: white;
+    }
+    .nav-link {
+      color: white;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #FFD700;
+    }
     .lineage-card {
       background: #f1f1f1;
-      padding: 1rem;
+      padding: 1rem 1.5rem;
       border-radius: 12px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #FFD700;
     }
   </style>
 </head>
 <body>
-  <header class="header-one" style="background-color:#6A0DAD; padding: 1rem;">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 style="color: white;">Xi Sigma</h1>
-      <nav>
-        <a href="index.html" style="color: white; margin-right: 1rem;">Home</a>
-        <a href="neos.html" style="color: white; margin-right: 1rem;">Dent NEOS</a>
-        <a href="calendar.html" style="color: white; margin-right: 1rem;">Event Calendar</a>
-        <a href="history.html" style="color: white; margin-right: 1rem;">History</a>
-        <a href="photos.html" style="color: white;">Photos</a>
-      </nav>
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#6A0DAD;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Xi Sigma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="neos.html">Dent NEOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Event Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="lineage.html">Lineage</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="donation.html">Donate</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <main class="container py-5">
-    <h2 class="text-center mb-4">Lineage of Xi Sigma</h2>
-    <p class="text-center mb-5">A tribute to all the lines that have come before. Every brother. Every year.</p>
+    <h2 class="text-center mb-4" data-aos="fade-down">Lineage of Xi Sigma</h2>
+    <p class="text-center mb-5" data-aos="fade-up">A tribute to all the lines that have come before. Every brother. Every year.</p>
 
-    <div class="lineage-card">
+    <div class="lineage-card" data-aos="fade-right">
       <h5>Spring 2023 - The Rebirth</h5>
       <ul>
         <li>William Dillard</li>
@@ -42,7 +80,7 @@
       </ul>
     </div>
 
-    <div class="lineage-card">
+    <div class="lineage-card" data-aos="fade-left">
       <h5>Fall 2019 - The Torchbearers</h5>
       <ul>
         <li>Chris Allen</li>
@@ -50,7 +88,7 @@
       </ul>
     </div>
 
-    <div class="lineage-card">
+    <div class="lineage-card" data-aos="fade-right">
       <h5>Spring 2017 - Omega Legacy</h5>
       <ul>
         <li>Tyrone Carter</li>
@@ -60,6 +98,19 @@
     </div>
   </main>
 
+  <footer>
+    <div class="container">
+      <div class="social-icons mb-2">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      &copy; 2025 Xi Sigma Chapter. All Rights Reserved.
+    </div>
+  </footer>
+
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>

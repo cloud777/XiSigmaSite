@@ -1,45 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>History - Xi Sigma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History - Xi Sigma Chapter</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header, footer {
+      background-color: #6A0DAD;
+      color: white;
+    }
+    .nav-link {
+      color: white;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #FFD700;
+    }
+    footer {
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #FFD700;
+    }
+  </style>
 </head>
 <body>
-  <header class="header-one" style="background-color:#6A0DAD; padding: 1rem;">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 style="color: white;">Xi Sigma</h1>
-      <nav>
-        <a href="index.html" style="color: white; margin-right: 1rem;">Home</a>
-        <a href="neos.html" style="color: white; margin-right: 1rem;">Dent NEOS</a>
-        <a href="calendar.html" style="color: white; margin-right: 1rem;">Event Calendar</a>
-        <a href="lineage.html" style="color: white; margin-right: 1rem;">Lineage</a>
-        <a href="photos.html" style="color: white;">Photos</a>
-      </nav>
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#6A0DAD;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Xi Sigma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="neos.html">Dent NEOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Event Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="lineage.html">Lineage</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="donation.html">Donate</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <main class="container py-5">
-    <h2 class="text-center mb-4">History of the Xi Sigma Chapter</h2>
-    <p class="lead text-center mb-5">
+    <h2 class="text-center mb-4" data-aos="fade-down">History of the Xi Sigma Chapter</h2>
+    <p class="lead text-center mb-5" data-aos="fade-up">
       The Xi Sigma Chapter of Omega Psi Phi Fraternity, Inc. was founded with a mission to uplift, inspire, and lead. Since its inception, our chapter has continued to make an impact both on and off campus through service, leadership, and brotherhood.
     </p>
 
-    <div class="text-center">
-      <img src="assets/images/founding-photo.jpg" class="img-fluid mb-4" alt="Founding photo placeholder" />
+    <div class="text-center mb-5" data-aos="zoom-in">
+      <img src="assets/images/founding-photo.jpg" class="img-fluid rounded shadow" alt="Founding photo" />
     </div>
 
-    <p>
-      The brothers of Xi Sigma have upheld the four cardinal principles: Manhood, Scholarship, Perseverance, and Uplift. Our history is built on a legacy of excellence, community engagement, and academic achievement.
-    </p>
-
-    <p>
-      From campus events to community service initiatives, Xi Sigma continues to be a guiding light of leadership and purpose. Our alumni have gone on to succeed in diverse fields and remain committed to mentoring the next generation of brothers.
-    </p>
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-right">
+        <p>
+          The brothers of Xi Sigma have upheld the four cardinal principles: Manhood, Scholarship, Perseverance, and Uplift. Our history is built on a legacy of excellence, community engagement, and academic achievement.
+        </p>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <p>
+          From campus events to community service initiatives, Xi Sigma continues to be a guiding light of leadership and purpose. Our alumni have gone on to succeed in diverse fields and remain committed to mentoring the next generation of brothers.
+        </p>
+      </div>
+    </div>
   </main>
 
+  <footer>
+    <div class="container">
+      <div class="social-icons mb-2">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      &copy; 2025 Xi Sigma Chapter. All Rights Reserved.
+    </div>
+  </footer>
+
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

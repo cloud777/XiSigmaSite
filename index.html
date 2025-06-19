@@ -1,57 +1,225 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Xi Sigma Chapter</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-</head>
-<body>
-  <header class="header-one" style="background-color:#6A0DAD; padding: 1rem;">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 style="color: white;">Xi Sigma</h1>
-      <nav>
-        <a href="neos.html" style="color: white; margin-right: 1rem;">Dent NEOS</a>
-        <a href="calendar.html" style="color: white; margin-right: 1rem;">Event Calendar</a>
-        <a href="history.html" style="color: white; margin-right: 1rem;">History</a>
-        <a href="lineage.html" style="color: white; margin-right: 1rem;">Lineage</a>
-        <a href="photos.html" style="color: white; margin-right: 1rem;">Photos</a>
-        <a href="contact-us.html" style="color: white; margin-right: 1rem;">Contact</a>
-        <a href="donation.html" style="color: white;">Donate</a>
-      </nav>
-    </div>
-  </header>
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papKZnT+JfIFXfu6TXA9QyQ1p7+Kd91GR6jSHz5xkbi2UapfS5M+Fv6VlGB8CVak7BO9SuvhOsH0UEZswZj0Jg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
 
-  <section class="hero text-white text-center d-flex align-items-center" style="background-color:#6A0DAD; height: 60vh;">
+    .nav-link {
+      color: white;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #FFD700;
+    }
+
+    .hero {
+      background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+      color: white;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(106, 13, 173, 0.6);
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .info-section h3 {
+      color: #6A0DAD;
+      font-weight: 600;
+    }
+
+    .highlight {
+      background-color: #f8f9fa;
+      padding: 2rem 0;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: 0.3s ease-in-out;
+    }
+
+    footer {
+      background-color: #6A0DAD;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #FFD700;
+    }
+
+    #preloader {
+      background: #6A0DAD;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 6px solid #fff;
+      border-top-color: #FFD700;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#6A0DAD;">
     <div class="container">
-      <h2 class="display-4">Welcome to Xi Sigma</h2>
-      <p class="lead">Brotherhood, Leadership, and Service in Action</p>
-      <a href="donation.html" class="btn btn-light mt-3">Support Our Mission</a>
+      <a class="navbar-brand" href="#">Xi Sigma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="neos.html">Dent NEOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Event Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="lineage.html">Lineage</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="donation.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container" data-aos="fade-up">
+      <h2 class="display-3 fw-bold">Welcome to Xi Sigma</h2>
+      <p class="lead">The MEASURING ROD</p>
+      <a href="donation.html" class="btn btn-light btn-lg mt-3">Support Our Mission</a>
     </div>
   </section>
 
-  <main class="container py-5">
-    <div class="row">
-      <div class="col-md-4 text-center">
+  <main class="container py-5 info-section">
+    <div class="row text-center">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
         <h3>Manhood</h3>
         <p>Upholding honor and dignity in everything we do.</p>
       </div>
-      <div class="col-md-4 text-center">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
         <h3>Scholarship</h3>
         <p>Committed to academic excellence and lifelong learning.</p>
       </div>
-      <div class="col-md-4 text-center">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
         <h3>Uplift</h3>
         <p>Serving our community through action and unity.</p>
       </div>
     </div>
   </main>
 
-  <footer class="text-center py-3" style="background-color:#6A0DAD; color:white;">
-    &copy; 2025 Xi Sigma Chapter. All Rights Reserved.
+  <section class="highlight">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="mb-4">Upcoming Highlights</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <img src="assets/images/event1.jpg" class="card-img-top" alt="Event 1">
+            <div class="card-body">
+              <h5 class="card-title">Back 2 School Drive</h5>
+              <p class="card-text">Giving back to the youth with essential school supplies and mentorship.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <img src="assets/images/event2.jpg" class="card-img-top" alt="Event 2">
+            <div class="card-body">
+              <h5 class="card-title">Midnight Informational</h5>
+              <p class="card-text">An open conversation about who we are and what we stand for.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <img src="assets/images/event3.jpg" class="card-img-top" alt="Event 3">
+            <div class="card-body">
+              <h5 class="card-title">Chapter Legacy Banquet</h5>
+              <p class="card-text">Celebrating years of service and leadership in our community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="social-icons mb-2">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      &copy; 2025 Xi Sigma Chapter. All Rights Reserved.
+    </div>
   </footer>
 
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
 </body>
+
+
 </html>
