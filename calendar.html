@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,32 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Event Calendar - Xi Sigma</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .nav-link {
+      color: white;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #FFD700;
+    }
+    .calendar-wrapper {
+      background-color: #f9f9f9;
+      padding: 3rem 1rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+    .ratio iframe {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      background-color: #6A0DAD;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #FFD700;
+    }
+  </style>
 </head>
 <body>
-  <header class="header-one" style="background-color:#6A0DAD; padding: 1rem;">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 style="color: white;">Xi Sigma</h1>
-      <nav>
-        <a href="index.html" style="color: white; margin-right: 1rem;">Home</a>
-        <a href="neos.html" style="color: white; margin-right: 1rem;">Dent NEOS</a>
-        <a href="history.html" style="color: white; margin-right: 1rem;">History</a>
-        <a href="lineage.html" style="color: white; margin-right: 1rem;">Lineage</a>
-        <a href="photos.html" style="color: white;">Photos</a>
-      </nav>
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#6A0DAD;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Xi Sigma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="neos.html">Dent NEOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Event Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="lineage.html">Lineage</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="donation.html">Donate</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <main class="container py-5">
-    <h2 class="text-center mb-4">Xi Sigma Event Calendar</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <!-- Replace with your Google Calendar embed link -->
-        <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id_here" 
-                style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    <h2 class="text-center mb-4" data-aos="fade-down">Xi Sigma Event Calendar</h2>
+    <p class="text-center mb-4" data-aos="fade-up">Stay up to date with our latest chapter events, service opportunities, and more.</p>
+    
+    <div class="calendar-wrapper" data-aos="zoom-in">
+      <div class="ratio ratio-16x9">
+        <!-- Replace the empty src with your public Google Calendar embed link -->
+        <iframe src="" allowfullscreen loading="lazy" title="Xi Sigma Calendar">
+          <p>Your browser does not support iframes.</p>
+        </iframe>
       </div>
+      <p class="text-center mt-3 text-muted">Calendar coming soon — check back later for updates.</p>
     </div>
   </main>
 
+  <footer>
+    <div class="container">
+      <div class="social-icons mb-2">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      &copy; 2025 Xi Sigma Chapter. All Rights Reserved.
+    </div>
+  </footer>
+
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
+```
